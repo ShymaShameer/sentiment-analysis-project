@@ -6,12 +6,14 @@ on:
     paths:
       - "src/**"
       - "data/**"
+      - "tests/**"
       - "requirements.txt"
       - ".github/workflows/**"
   pull_request:
     paths:
       - "src/**"
       - "data/**"
+      - "tests/**"
       - "requirements.txt"
       - ".github/workflows/**"
 
