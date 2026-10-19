@@ -39,8 +39,9 @@ jobs:
           python src/train.py
 
       - name: Run tests
-        run: pytest -v
-        
+        run: |
+          pytest -v
+
       - name: Run predictions
         run: |
           python src/predict.py "I love this product" "This was a terrible experience"
