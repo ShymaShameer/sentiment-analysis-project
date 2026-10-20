@@ -19,15 +19,6 @@ def classifier():
     return load_model(str(MODEL_PATH))
 
 
-#def test_positive_sentence(classifier):
-    #preds, _ = predict_texts(classifier, ["I love this movie, it was fantastic and inspiring!"])
-    #assert preds[0] == 1
-
-
-#def test_negative_sentence(classifier):
-    #preds, _ = predict_texts(classifier, ["The service was terrible and the food was awful."])
-    #assert preds[0] == 0
-
 @pytest.mark.parametrize(
     "text, expected",
     [
@@ -39,6 +30,7 @@ def classifier():
 def test_obvious_sentiment(classifier, text, expected):
     preds, _ = predict_texts(classifier, [text])
     assert preds[0] == expected
+
 
 def test_output_format(classifier):
     texts = ["great", "awful"]
